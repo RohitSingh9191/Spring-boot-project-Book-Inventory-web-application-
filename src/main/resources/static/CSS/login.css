@@ -1,0 +1,46 @@
+.dvadmin{
+	padding:10px 10px 50px 10px;
+	width:40%;
+	background-color:white;
+	border-radius:.4vw;
+	margin-top:4vw;
+}
+.dvuser{
+	padding:10px 10px 30px 10px;
+	width:40%;
+	background-color:white;
+	border-radius:.4vw;
+	margin-top:2vw;
+}
+.dvhome{
+	padding:30px 10px 30px 10px;
+	width:40%;
+	background-color:white;
+	border-radius:.4vw;
+	margin-top:2vw;
+}
+.dv80{
+	text-align: center;
+}
+.dvlog{
+	text-align: left;
+	width:70%;
+	margin-top:2.7vw;
+}
+.btlog{
+	background-color:#00BA8C;
+	color:white;
+	font-size:1.8vw;
+	width:100%;
+	border:none;
+	padding:.4vw;
+	font-weight:bold;
+	border-radius:5px;
+	cursor: pointer;
+}
+.tblog{
+	font-size:1.5vw;
+	width:100%;
+	border-radius:.4vw;
+	height:3vw;
+}

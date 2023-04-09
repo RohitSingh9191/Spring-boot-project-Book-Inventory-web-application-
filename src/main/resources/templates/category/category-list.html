@@ -1,0 +1,41 @@
+<html   xmlns:th="http://www.thymeleaf.org">
+ <body class='bgi'>
+  <div th:insert="top"></div>
+  	<div class='container'>
+  	 <div class='card'>
+  	   <div class='card-body'>
+  	    <div class='dvv' th:if="${clist.empty}">
+  	      <label class='text-danger lah'>No category is added yet</label>
+  	    </div>
+    	<div th:if="${!clist.empty}" class='scrollit'>
+    	  <table class='table'>
+     	   <thead>
+            <tr>
+     			<th class='tdr'>Cat Id</th>
+     			<th class='tdr'>Category</th>
+     			<th class='tdr'>Description</th>
+     			<th class='tdr' style='color:magenta'>Action</th>
+      		</tr>
+         </thead>
+        <tbody>
+         <tr th:each="cat:${clist}">
+          <td th:text="${cat.catid}"></td>
+          <td th:text="${cat.category}"></td>
+          <td th:text="${cat.description}"></td>
+          <td>
+           <a class='la' th:href='@{edit(cid=${cat.catid})}'>Edit |</a>
+           <a class='la' th:href='@{remove(cid=${cat.catid})}' onclick="return confirm('Are you sure to remove?')">Remove</a>
+          </td>
+         </tr>
+        </tbody> 
+       </table>
+    </div>
+    </div>
+   </div>
+    <div class='dvv'>
+     <a class='btl' href='add'>Add new Category</a>
+     <a class='btl' href='../home' style='background-color:orange'>Back</a>
+  </div>
+   </div>
+ </body>
+ </html>

@@ -1,0 +1,201 @@
+.dvv{
+	text-align: center;
+	margin-top:2vw;
+}
+.ddv{
+	text-align: center;
+	margin-top:1vw;
+}
+.dv{
+	text-align: center;
+	margin-top:4vw;
+}
+.lah{
+	font-size:2vw;
+	font-family: Arial, Helvetica, sans-serif;
+	color:white;
+}
+.la{
+	font-size:1.5vw;
+}
+.laa{
+	font-size:1.2vw;
+}
+.btl{
+	background-color: white;
+  	border: none;
+  	color: blue;
+  	padding: .4vw 2vw;
+  	text-align: center;
+  	text-decoration: none;
+  	font-size: 1.5vw;
+  	margin-left: 1vw;
+  	border-radius:.4vw;
+}
+.btl:hover{
+	text-decoration: underline;
+	color:black;
+}
+.login{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:2vw;
+	height:34%;
+	border-color:green;
+	border:.3vw solid blue;
+	background-color:#AACCBB;
+}
+.tb{
+	font-size:1.8vw;
+	width:100%;
+}
+.tbb{
+	height:3vw;
+	width:100%;
+}
+.logintd{
+	font-size:1.8vw;
+	padding:.7vw;
+}
+.btr{
+	background-color: #008CBA;
+  	border: none;
+  	color: white;
+  	padding: .2vw 2vw;
+  	text-align: center;
+  	text-decoration: none;
+  	font-size: 1.5vw;
+  	border-radius:.4vw;
+  	height:3vw;
+  	cursor:pointer;
+}
+.btr1{
+	background-color: #008CBA;
+  	border: none;
+  	color: white;
+  	padding: .5vw 2vw;
+  	text-align: center;
+  	text-decoration: none;
+  	font-size: 1.5vw;
+  	border-radius:.4vw;
+  	height:4vw;
+  	cursor:pointer;
+}
+span{
+	color:red;
+}
+.tad{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:2vw;
+	width: 50%;
+	font-size:1.7vw;
+	border-collapse: collapse;
+	background-color:white;
+}
+.tatd{
+	padding:.7vw;
+}
+.an{
+	font-size:2vw;
+	margin-left:1.6vw;
+	text-decoration: underline;
+}
+.anc{
+	font-size:2.2vw;
+	margin-left:1.6vw;
+	text-decoration: underline;
+	color:magenta;
+}
+.tdr{
+	font-size:1.2vw;
+}
+.tae{
+	margin-top:2vw;
+	width: 90%;
+	margin-left:auto;
+	margin-right:auto;
+	font-size:1.8vw;
+}
+.dvt{
+	 width:60%;
+	 border:2px solid silver;
+	 margin-left:auto;
+	 margin-right:auto;
+	 text-align:center;
+}
+.oc{
+	background-color: orange;
+}
+.tab{
+	margin-top:2vw;
+	margin-left:auto;
+	margin-right:auto;
+	font-size:1.8vw;
+	border:2px solid silver;
+	width:50%;
+}
+.hp{
+	font-family: canva;
+	color:white;
+	font-weight:bold;
+	background-color:green;
+}
+.dp{
+	color:black;
+	background-color:yellow;
+}
+.searchta{
+	margin-top:2vw;
+	margin-left:auto;
+	margin-right:auto;
+	width:60%;
+	border:.3vw solid black;
+	border-radius:.5vw;
+	background-color:silver;
+}
+.nb{
+	width:60%;
+	font-size:1.6vw;
+	margin-left:9px; 
+}
+.dv80{
+	text-align: center;
+}
+.dvlog{
+	text-align: left;
+	width:70%;
+	margin-top:2.7vw;
+}
+.btlog{
+	background-color:lightgreen;
+	color:white;
+	font-size:1.8vw;
+	width:100%;
+	border:none;
+	padding:.4vw;
+	font-weight:bold;
+	border-radius:5px;
+	cursor: pointer;
+}
+.bgi{
+	 background-image:url("../images/home1.jfif");
+}
+.dv-card{
+	align:center;
+	width:50%;
+	border:8px solid gray;
+	background-color:white;
+}
+.scrollit {
+    overflow:scroll;
+    max-height:53vh;
+}
+.scrollit thead th {
+      position: sticky;
+      background:teal;
+      color:white;
+      top: 0;
+}
+
+    

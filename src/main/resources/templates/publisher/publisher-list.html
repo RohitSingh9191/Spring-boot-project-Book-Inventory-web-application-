@@ -1,0 +1,43 @@
+<html   xmlns:th="http://www.thymeleaf.org">
+ <body class='bgi'>
+  <div th:insert="top"></div>
+  <div class='container'>
+  <div class='card'>
+  <div class='card-body'>
+    <div class='dvv' th:if="${plist.empty}">
+      <label class='lah' style='color:red'>No publisher is added yet</label>
+    </div>
+    <div th:if="${!plist.empty}" class='scrollit'>
+    <table class='table'>
+     <thead>
+      <tr>
+     	<th class='tdr'>Pub Id</th>
+     	<th class='tdr'>Publisher name</th>
+     	<th class='tdr'>Phone number</th>
+     	<th class='tdr'>Email id</th>
+     	<th class='tdr' style='color:magenta'>Action</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr th:each="pub:${plist}">
+     	<td class='tds' th:text="${pub.pubid}"></td>
+     	<td class='tdr' th:text="${pub.publisher}"></td>
+     	<td class='tdr' th:text="${pub.phone}"></td>
+     	<td class='tdr' th:text="${pub.email}"></td>
+	    <td class='tdr'>
+      		<a th:href="@{edit(pid=${pub.pubid})}">Edit |</a>
+     		<a th:href="@{remove(pid=${pub.pubid})}" onclick='return confirm("Are you sure to remove?")'>Remove</a> 
+     	</td>
+       </tr>
+       </tbody>
+      </table>
+    </div>
+    </div>
+   </div>
+    <div class='dvv'>
+     <a class='btl' href='add'>Add new Publisher</a>
+     <a class='btl' href='../home' style='background-color:orange'>Back</a>
+  </div>
+   </div>
+ </body>
+ </html>

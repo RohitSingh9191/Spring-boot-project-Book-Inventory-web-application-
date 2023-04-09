@@ -1,0 +1,28 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:insert="top"></div>
+<body class='bgi'>
+<form action="save" method="post">
+<table class='tab' style='background-color:white'>
+  <tr>
+   	<td class='tatd'>Enter category</td>
+   	<td class='tatd'>
+	  <input class='tbb' type='text' id='category' name="category" required/>
+  	</td>
+  </tr>
+  <tr>
+   	<td class='tatd'>Enter description</td>
+   	<td class='tatd'>
+	  <textarea class='tbb' style="height:12vh" id='description' name="description" required>
+	  </textarea>
+  	</td>
+  </tr>
+  <tr>
+  	<td class='tatd' colspan="2" align="center">
+   		<button class='btr'>Insert Category</button>
+   		<input type='button' value='cancel' class='btr' style='background-color:orange' onclick='history.back()'>
+    </td>
+  </tr>
+ </table>
+</form>
+</body>
+</html>

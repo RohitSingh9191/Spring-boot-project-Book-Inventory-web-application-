@@ -1,0 +1,32 @@
+<html xmlns:th="http://www.thymeleaf.org">
+ <head>
+  <link th:href='@{/CSS/style.css}' rel='stylesheet'>
+  <link th:href='@{/CSS/login.css}' rel='stylesheet'>
+ </head>
+ <body class='bgi'>
+  <div class='dvv'>
+   <label  style='color:orange;font-size:3vw'>BOOK INVENTROY MANAGEMENT</label>
+  </div>
+ <form action='/bookstore/inventory/authenticate' method='post'>
+  <div align='center'>
+    <div class='dvadmin'>
+     <h2 style='font-size:2.1vw'>Store manager account sign in</h2>
+     <div class='dvlog'>
+       <label class='la'>Enter user name</label><br>
+       <input type='text' name='username' th:value="${user}" class='tblog' required>
+     </div>
+     <div class='dvlog'>
+       <label class='la'>Enter password</label><br>
+       <input type='password' name='password' class='tblog' required>
+     </div>	
+     <div class='dvlog'>	
+       <button class='btlog'>Sign In</button>
+       <div style="text-align:center;margin-top:1vw" >
+           <label class='la' th:text="${msg}" style='color:red'></label>
+       </div>
+     </div>	
+    </div>
+  </div>
+  </form>
+ </body>
+</html>

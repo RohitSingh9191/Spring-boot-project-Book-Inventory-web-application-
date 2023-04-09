@@ -1,0 +1,48 @@
+<html   xmlns:th="http://www.thymeleaf.org">
+ <div th:insert="top"></div>
+ <body class='bgi'>
+  <form>
+  <div style='text-align:center'>
+   <label style='font-size:2.4vw;color:white;font-family:elephant' th:text="${'Book list by '+by}"></label>
+  </div> 
+  <div class='container'>
+    <div class='card'>
+      <div class='card-body'>
+      <div class='dvv' th:if="${blist.empty}">
+   		<label class='lah' style='color:red'>There is no book in store</label>
+      </div>
+      <div th:if="${!blist.empty}" class='scrollit'>
+        <table class='table laa'>
+   		 <thead>
+    		<tr><th>Book</th><th>Title</th><th>Author</th><th>CId</th><th>PId</th>
+    		<th>Copies</th><th>Price</th><th>Stock</th>
+    		<th style='color:magenta'>Action</th></tr>
+         </thead>
+         <tbody>
+    		<tr th:each="book:${blist}">
+     			<td class='tdr' th:text="${book.bookid}"></td>
+     			<td class='tdr' th:text="${book.title}"></td>
+     			<td class='tdr' th:text="${book.author}"></td>
+     			<td class='tdr' th:text="${book.catid}"></td>
+     			<td class='tdr' th:text="${book.pubid}"></td>
+     			<td class='tdr' th:text="${book.copies}"></td>
+     			<td class='tdr' th:text="${'&#8377'+book.price}"></td>
+     			<td class='tdr' th:if="${book.copies>0}" style='color:green'>In Stock</td>
+     			<td class='tdr' th:if="${book.copies==0}" style='color:red'>Out of Stock</td>
+     			<td class='tdr'>
+      				<a th:href="@{edit(bid=${book.bookid})}">Edit |</a>
+      				<a th:href="@{remove(bid=${book.bookid})}" onclick='return confirm("Are you sure to remove?")'>Remove</a> 
+     			</td>
+    	   </tr>
+   		 </tbody>
+  	   </table>
+     </div>
+     <div class='dvv'>
+     	<a class='btl' href='/bookstore/inventory/book/search' style='background-color:orange'>Back</a>
+  	 </div>
+    </div>
+   </div>
+  </div>
+  </form>
+ </body>
+ </html>

@@ -1,0 +1,39 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:insert="top"></div>
+<body class='bgi'>
+<form action="update" method="post">
+<table class='tab' style='background-color:white'>
+  <tr>
+   	<td class='tatd'>Publisher Id</td>
+   	<td class='tatd'><label class='la' th:text="${pub.pubid}"></label>
+	  <input type='hidden' name="pubid" th:value="${pub.pubid}"  required/>
+  	</td>
+  </tr>
+  <tr>
+   	<td class='tatd'>Edit publisher</td>
+   	<td class='tatd'>
+	  <input class='tbb' type='text' id='publisher' name="publisher" th:value="${pub.publisher}" required/>
+  	</td>
+  </tr>
+  <tr>
+   	<td class='tatd'>Edit phone number</td>
+   	<td class='tatd'>
+	  <input class='tbb' id='phone' name="phone" th:value="${pub.phone}" required>
+  	</td>
+  </tr>
+  <tr>
+   	<td class='tatd'>Edit email id</td>
+   	<td class='tatd'>
+	  <input class='tbb' type='text' id='email' name="email" th:value="${pub.email}" required/>
+  	</td>
+  </tr>
+  <tr>
+  	<td class='tatd' colspan="2" align="center">
+   		<button class='btr'>Update Publisher</button>
+   		<input type='button' value='cancel' class='btr' style='background-color:orange' onclick='history.back()'>
+    </td>
+  </tr>
+ </table>
+</form>
+</body>
+</html>

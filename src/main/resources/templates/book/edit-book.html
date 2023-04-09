@@ -1,0 +1,61 @@
+<html  xmlns:th="http://www.thymeleaf.org">
+<body class='bgi'>
+ <div th:insert="top"></div>
+ <div class='container'>
+ <div class='card mx-auto col-md-10'>
+  <div class='card-body'>
+   <form action="update" method="post">
+   <div class='row form-group'>
+      <div class='col-md-10'>
+       	<label for="bid">Book id</label>
+       	<input type='text' readonly="readonly" id='bid' name='bookid' th:value="${book.bookid}" class='form-control' required/>
+      </div>
+    </div>
+   <div class='row form-group'>
+      <div class='col-md-6'>
+       	<label for="title">Edit book title</label>
+       	<input type='text'name='title' th:value="${book.title}"  id='title' class='form-control' required/>
+      </div>
+      <div class='col-md-6'>
+      	<label for="author">Edit author name</label>
+       	<input type='text' name='author' th:value="${book.author}" id='author' class='form-control' required/>
+     </div>
+    </div>
+    <div class='row form-group'>
+      <div class='col-md-6'>
+       	<label for="title">Edit category</label><span> *</span>
+       	<select name="catid" id='category' class='form-control' required>
+          <option th:if="${book.catid==cat.catid}"  selected th:each="cat:${clist}" th:text="${cat.category}" th:value="${cat.catid}"></option>
+       	  <option th:if="${book.catid!=cat.catid}" th:each="cat:${clist}" th:text="${cat.category}" th:value="${cat.catid}"></option>
+       	</select>
+      </div>
+      <div class='col-md-6'>
+      	<label for="author">Edit publisher</label><span> *</span>
+       	<select name="pubid" id='publisher' class='form-control' required>
+          <option th:if="${book.pubid==pub.pubid}" selected th:each="pub:${plist}" th:text="${pub.publisher}" th:value="${pub.pubid}"></option>
+       	  <option th:if="${book.pubid!=pub.pubid}" th:each="pub:${plist}" th:text="${pub.publisher}" th:value="${pub.pubid}"></option>
+       	</select>
+      </div>
+    </div>
+    <div class='row form-group'>
+     <div class='col-md-6'>
+       	<label for="copies">Edit number of copies</label>
+       	<input type='number' name='copies' th:value="${book.copies}"  id='copies' class='form-control' required/>
+      </div>
+      <div class='col-md-6'>
+      	<label for="price">Edit price</label>
+       	<input type='text' name='price' th:value="${book.price}"  id='price' class='form-control' required/>
+     </div>
+    </div>
+    <div class='row form-group'>
+     <div class='col-md-10'>
+       	<button class='btr'>Update Record</button>
+       	<input type='button' value='cancel' class='btr' style='background-color:orange' onclick='history.back()'>
+     </div>
+    </div>
+   </form>
+  </div>
+ </div>
+</div>
+</body>
+</html>

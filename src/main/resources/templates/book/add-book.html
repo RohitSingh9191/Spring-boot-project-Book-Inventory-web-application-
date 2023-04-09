@@ -1,0 +1,53 @@
+<html  xmlns:th="http://www.thymeleaf.org">
+<body class='bgi'>
+<div th:insert="top"></div>
+<div class='container'>
+ <div class='card mx-auto col-md-10'>
+  <div class='card-body'>
+   <form action="save" method="post">
+     <div class='row form-group'>
+      <div class='col-md-6'>
+       	<label for="title">Enter book title</label><span> *</span>
+       	<input type='text' name="title" id='title' class='form-control' required/>
+      </div>
+      <div class='col-md-6'>
+      	<label for="author">Enter author name</label><span> *</span>
+       	<input type='text' name="author" id='author' class='form-control' required/>
+     </div>
+    </div>
+    <div class='row form-group'>
+      <div class='col-md-6'>
+       	<label for="title">Select category</label><span> *</span>
+       	<select name="catid" id='category' class='form-control' required>
+       	  <option th:each="cat:${clist}" th:text="${cat.category}" th:value="${cat.catid}"></option>
+       	</select>
+      </div>
+      <div class='col-md-6'>
+      	<label for="author">Select publisher</label><span> *</span>
+       	<select name="pubid" id='publisher' class='form-control' required>
+       	 <option th:each="pub:${plist}" th:text="${pub.publisher}" th:value="${pub.pubid}"></option>
+       	</select>
+     </div>
+    </div>
+    <div class='row form-group'>
+     <div class='col-md-6'>
+       	<label for="copies">Enter number of copies</label><span> *</span>
+       	<input type='text'  name="copies" id='copies' class='form-control' required/>
+      </div>
+      <div class='col-md-6'>
+      	<label for="price">Enter price</label><span> *</span>
+       	<input type='text' name="price" id='price' class='form-control' required/>
+     </div>
+    </div>
+    <div class='row form-group'>
+     <div class='col-md-10'>
+       	<button class='btr'>Add Book</button>
+       	<input type='button' value='cancel' class='btr' style='background-color:orange' onclick='history.back()'>
+     </div>
+    </div>
+   </form>
+  </div>
+ </div>
+</div>
+</body>
+</html>
